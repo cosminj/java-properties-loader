@@ -1,10 +1,25 @@
+buildscript {
+    dependencies {
+        classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.3.1'
+    }
+}
+
 plugins {
     id 'groovy'
     id 'idea'
+    id 'jacoco'
+    id 'com.github.kt3k.coveralls' version '2.4.0'
 }
 
 repositories {
     mavenCentral()
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled = true // coveralls plugin depends on xml format report
+        html.enabled = true
+    }
 }
 
 sourceCompatibility = 1.8
