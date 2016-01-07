@@ -7,9 +7,7 @@ import java.util.stream.Collectors;
 /**
  * A pure java implementation of AppProperties. (No DI frameworks used so far)
  */
-public class JavaAppProperties implements AppProperties {
-
-    private Map<Key, Property> props = new LinkedHashMap<>();
+public class JavaAppProperties extends LinkedHashMap<Key, Property> implements AppProperties {
 
     /**
      * Convert reference enum to Keys (to benefit from the ./_ logic) and then remove all loaded properties
@@ -21,7 +19,7 @@ public class JavaAppProperties implements AppProperties {
         return Arrays.stream(ReferenceProperty.values())
                 .map(Key::new)
                 // remove those already loaded in this.props
-                .filter(k -> !props.containsKey(k))
+                .filter(k -> !containsKey(k))
                 // re-map it to name() which gives us the string name of the key
                 .map(Key::name)
                 .collect(Collectors.toList());
@@ -40,24 +38,19 @@ public class JavaAppProperties implements AppProperties {
     }
 
     @Override
-    public void clear() {
-        props.clear();
-    }
-
-    @Override
     public Object get(String keyName) {
         final Key key = new Key(keyName);
-        Property property = props.get(key);
+        Property property = get(key);
         return property != null && property.value().isPresent() ? property.value().get() : null;
     }
 
     protected void saveAll(Set<Property> props) {
-        props.stream().forEach(p -> this.props.put(p.key(), p));
+        props.stream().forEach(p -> put(p.key(), p));
     }
 
     @Override
     public String toString() {
-        return props.values().stream()
+        return values().stream()
                 .filter(p -> p.value().isPresent())
                 .sorted((o1, o2) -> o1.key().name().compareTo(o2.key().name()))
                 .map(p -> {
@@ -77,4 +70,3 @@ public class JavaAppProperties implements AppProperties {
                 .collect(Collectors.joining("\n"));
     }
 }
-

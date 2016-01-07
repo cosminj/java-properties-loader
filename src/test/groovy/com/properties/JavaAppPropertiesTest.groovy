@@ -36,7 +36,7 @@ class JavaAppPropertiesTest extends Specification {
         tap.clear()
 
         then:
-        tap.props.isEmpty()
+        tap.isEmpty()
     }
 
     def "should return a correct value for existing loaded property"() {

@@ -8,10 +8,10 @@ class FileProviderTest extends Specification {
     def "should open an input stream to an existing file"() {
         given:
         FileProvider fileProvider = new FileProvider()
-        File pomXml = new File('build.gradle')
+        File buildGradle = new File('build.gradle')
 
         when:
-        InputStream is = fileProvider.openResource(pomXml.toURI());
+        InputStream is = fileProvider.openResource(buildGradle.toURI());
 
         then:
         is
