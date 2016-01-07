@@ -1,4 +1,4 @@
-package com.crossover.trial.properties.providers;
+package com.properties.providers;
 
 import java.io.IOException;
 import java.io.InputStream;

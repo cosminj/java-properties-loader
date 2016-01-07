@@ -1,6 +1,6 @@
-package com.crossover.trial.properties;
+package com.properties;
 
-import com.crossover.trial.properties.providers.PropertyProviderFactory;
+import com.properties.providers.PropertyProviderFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -1,4 +1,4 @@
-package com.crossover.trial.properties.providers;
+package com.properties.providers;
 
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;

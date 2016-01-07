@@ -1,4 +1,4 @@
-package com.crossover.trial.properties;
+package com.properties;
 
 import java.util.Arrays;
 import java.util.Map;

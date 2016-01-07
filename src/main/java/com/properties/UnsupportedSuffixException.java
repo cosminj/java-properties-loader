@@ -1,4 +1,4 @@
-package com.crossover.trial.properties;
+package com.properties;
 
 public class UnsupportedSuffixException extends RuntimeException {
 

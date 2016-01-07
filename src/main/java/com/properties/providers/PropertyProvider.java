@@ -1,8 +1,8 @@
-package com.crossover.trial.properties.providers;
+package com.properties.providers;
 
-import com.crossover.trial.properties.Key;
-import com.crossover.trial.properties.Property;
-import com.crossover.trial.properties.UnsupportedSuffixException;
+import com.properties.Key;
+import com.properties.Property;
+import com.properties.UnsupportedSuffixException;
 
 import java.io.IOException;
 import java.io.InputStream;

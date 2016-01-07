@@ -1,6 +1,6 @@
-package com.crossover.trial.properties.providers;
+package com.properties.providers;
 
-import com.crossover.trial.properties.Property;
+import com.properties.Property;
 
 import java.io.InputStream;
 import java.util.Set;

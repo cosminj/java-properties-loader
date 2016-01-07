@@ -1,6 +1,6 @@
-package com.crossover.trial.properties.providers;
+package com.properties.providers;
 
-import com.crossover.trial.properties.UnsupportedSchemeException;
+import com.properties.UnsupportedSchemeException;
 
 import java.net.URI;
 

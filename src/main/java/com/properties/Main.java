@@ -1,4 +1,4 @@
-package com.crossover.trial.properties;
+package com.properties;
 
 import java.io.File;
 import java.io.FileOutputStream;

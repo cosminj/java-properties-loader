@@ -1,4 +1,4 @@
-package com.crossover.trial.properties;
+package com.properties;
 
 public class UnsupportedSchemeException extends Exception {
 

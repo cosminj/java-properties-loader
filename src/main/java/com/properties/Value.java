@@ -1,4 +1,4 @@
-package com.crossover.trial.properties;
+package com.properties;
 
 import com.amazonaws.regions.Regions;
 import org.slf4j.Logger;

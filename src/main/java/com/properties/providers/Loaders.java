@@ -1,10 +1,10 @@
-package com.crossover.trial.properties.providers;
+package com.properties.providers;
 
-import com.crossover.trial.properties.Key;
-import com.crossover.trial.properties.Property;
-import com.crossover.trial.properties.ReferenceProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.properties.Key;
+import com.properties.Property;
+import com.properties.ReferenceProperty;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -26,7 +26,7 @@ public class Loaders {
         return Collections.emptySet();
     }
 
-    protected static Set<Property> loadFromPropertyFileUnchecked(InputStream is) throws IOException {
+    private static Set<Property> loadFromPropertyFileUnchecked(InputStream is) throws IOException {
         Properties props = new Properties();
         props.load(is);
         return props
