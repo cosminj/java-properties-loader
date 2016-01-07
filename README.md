@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/cosminj/java-properties-loader.svg?branch=master)](https://travis-ci.org/cosminj/java-properties-loader)
+[![Dependency Status](https://www.versioneye.com/user/projects/568e323e9c1b9802c5000000/badge.svg?style=flat)](https://www.versioneye.com/user/projects/568e323e9c1b9802c5000000)
 
 # java-properties-loader
 A pure java framework for loading up dozens of properties from the classpath, System.getProperties and remote URLs that return JSON.
