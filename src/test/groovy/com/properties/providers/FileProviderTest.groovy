@@ -8,14 +8,14 @@ class FileProviderTest extends Specification {
     def "should open an input stream to an existing file"() {
         given:
         FileProvider fileProvider = new FileProvider()
-        File pomXml = new File('pom.xml')
+        File pomXml = new File('build.gradle')
 
         when:
         InputStream is = fileProvider.openResource(pomXml.toURI());
 
         then:
         is
-        IOGroovyMethods.getText(is).contains('<groupId>com.properties</groupId>')
+        IOGroovyMethods.getText(is).contains("testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'")
     }
 
 }

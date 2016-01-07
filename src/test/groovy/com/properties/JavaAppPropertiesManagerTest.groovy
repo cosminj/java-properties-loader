@@ -1,5 +1,6 @@
 package com.properties
 
+import com.mysql.jdbc.Driver
 import spock.lang.Specification
 
 
@@ -15,7 +16,7 @@ class JavaAppPropertiesManagerTest extends Specification {
 
         then:
         tap.get('job.timeout') == 3600
-        tap.get('jdbc_driver') == com.mysql.jdbc.Driver
+        tap.get('jdbc_driver') == Driver.class
     }
 
 }

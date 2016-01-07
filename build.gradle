@@ -33,16 +33,14 @@ dependencies {
     // needed to provide validaton for a property of type amazon Region
     compile 'com.amazonaws:aws-java-sdk:1.10.44'
 
-    //needed to load sample property type class mysql Driver
-    runtime 'mysql:mysql-connector-java:5.1.38'
-
-
     testCompile 'org.codehaus.groovy:groovy-all:2.4.5'
     testCompile 'org.hamcrest:hamcrest-core:1.3'
     testCompile 'junit:junit:4.12'
     testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
     testRuntime 'cglib:cglib-nodep:3.2.0'
     testRuntime 'org.objenesis:objenesis:2.2'
+    //needed to load sample property type class mysql Driver
+    testCompile 'mysql:mysql-connector-java:5.1.38'
 }
 
 idea {
