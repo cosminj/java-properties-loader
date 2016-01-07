@@ -44,7 +44,7 @@ public class JavaAppProperties extends LinkedHashMap<Key, Property> implements A
         return property != null && property.value().isPresent() ? property.value().get() : null;
     }
 
-    protected void saveAll(Set<Property> props) {
+    void saveAll(Set<Property> props) {
         props.stream().forEach(p -> put(p.key(), p));
     }
 

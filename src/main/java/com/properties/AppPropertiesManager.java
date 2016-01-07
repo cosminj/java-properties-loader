@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * This provides programmatic interface to loading properties
  */
-public interface AppPropertiesManager {
+interface AppPropertiesManager {
 
     /**
      * Given a list of URIs and set of required keys, construct an AppProperties object.

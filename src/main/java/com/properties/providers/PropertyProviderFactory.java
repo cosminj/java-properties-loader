@@ -24,7 +24,7 @@ public class PropertyProviderFactory {
         file(new FileProvider()),
         http(new HttpProvider());
 
-        private PropertyProvider provider;
+        private final PropertyProvider provider;
 
         ProviderType(PropertyProvider provider) {
             this.provider = provider;

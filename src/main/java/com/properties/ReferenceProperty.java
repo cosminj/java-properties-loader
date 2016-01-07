@@ -22,7 +22,7 @@ public enum ReferenceProperty {
     sns_broadcast_topic_name(Value::asString),
     score_factor(Value::asDouble);
 
-    private static Map<Key, ReferenceProperty> allKnownProperties = Arrays
+    private static final Map<Key, ReferenceProperty> allKnownProperties = Arrays
             .stream(values())
             .collect(Collectors.toMap(
                     Key::new,

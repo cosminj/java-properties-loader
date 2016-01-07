@@ -11,15 +11,15 @@ import java.util.function.Function;
 /**
  * Provides a type safe value for a property.
  */
-public class Value {
+class Value {
 
-    private static Logger log = LoggerFactory.getLogger(Value.class);
+    private static final Logger log = LoggerFactory.getLogger(Value.class);
 
     public static Optional<Boolean> asBool(String x) {
         return validateAndCompute(x, Value::parseBoolean);
     }
 
-    public static Optional<Integer> asInt(String x) {
+    static Optional<Integer> asInt(String x) {
         return validateAndCompute(x, Integer::valueOf);
     }
 

@@ -13,11 +13,11 @@ import java.io.InputStream;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class Loaders {
+class Loaders {
 
     private static final Logger logger = LoggerFactory.getLogger(Loaders.class);
 
-    protected static Set<Property> loadFromPropertyFile(InputStream is) {
+    static Set<Property> loadFromPropertyFile(InputStream is) {
         try {
             return loadFromPropertyFileUnchecked(is);
         } catch (IOException ex) {
@@ -41,21 +41,21 @@ public class Loaders {
      * Filter out properties which are not "known" (they don't exist in ReferenceProperty) and those with wrong values
      */
     private static boolean filterOutUnknownOrBadFormat(Map.Entry<Object, Object> e) {
-        final Key key = getKeyfromEntry(e);
+        final Key key = getKeyFromEntry(e);
         return ReferenceProperty.isKnown(key.name()) && extractProperty(e).value().isPresent();
     }
 
-    private static Key getKeyfromEntry(Map.Entry<Object, Object> e) {
+    private static Key getKeyFromEntry(Map.Entry<Object, Object> e) {
         return new Key((String) e.getKey());
     }
 
     private static Property extractProperty(Map.Entry<Object, Object> e) {
-        final Key key = getKeyfromEntry(e);
+        final Key key = getKeyFromEntry(e);
         final Optional<?> value = ReferenceProperty.from(key.name()).getValue((String) e.getValue());
         return new Property(key, value);
     }
 
-    protected static Set<Property> loadFromJsonFile(InputStream is) {
+    static Set<Property> loadFromJsonFile(InputStream is) {
         try {
             return loadFromJsonFileUnchecked(is);
         } catch (IOException ex) {
@@ -64,7 +64,7 @@ public class Loaders {
         return Collections.emptySet();
     }
 
-    protected static Set<Property> loadFromJsonFileUnchecked(InputStream is) throws IOException {
+    private static Set<Property> loadFromJsonFileUnchecked(InputStream is) throws IOException {
         Set<Property> properties = new LinkedHashSet<>();
 
         ObjectMapper objectMapper = new ObjectMapper();

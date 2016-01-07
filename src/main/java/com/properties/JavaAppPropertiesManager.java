@@ -17,13 +17,13 @@ import java.util.Set;
 public class JavaAppPropertiesManager implements AppPropertiesManager {
 
     private final Logger log = LoggerFactory.getLogger(this.getClass());
-    private JavaAppProperties appProperties;
+    private final JavaAppProperties appProperties;
 
-    public JavaAppPropertiesManager() {
+    JavaAppPropertiesManager() {
         this(new JavaAppProperties());
     }
 
-    public JavaAppPropertiesManager(JavaAppProperties appProperties) {
+    private JavaAppPropertiesManager(JavaAppProperties appProperties) {
         this.appProperties = appProperties;
     }
 
