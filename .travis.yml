@@ -1,0 +1,19 @@
+language: java
+jdk:
+  - oraclejdk8
+after_success:
+- ./gradlew jacocoTestReport coveralls
+env:
+  global:
+  # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
+  # via the "travis encrypt" command using the project repo's public key
+  - secure: "QGzmiX8aUqT1hFj80CNneKIP+wtCB9Vj3Qnhvu32+JpoUlluQu7pi1D1PpKv47ZrBYeJc1Dy9HNUpu6XZzJQYtCnr5nIUuqufZP2rs02PE+p3wajZo3Z47iWVU4xdqUHGPXpH4oabYvsPPL2cEF4ZekmRpu8STA6umLNF2oS2hU="
+
+addons:
+  coverity_scan:
+    project:
+      name: "cosminj/java-properties-loader"
+      description: "A pure java framework for loading up JSON/PROPERTIES from remote files over over http / classpath / file system."
+    notification_email: cosminj@gmail.com
+    build_command:   "./gradlew clean build"
+    branch_pattern: coverity_scan
