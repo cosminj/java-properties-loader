@@ -31,7 +31,7 @@ dependencies {
     compile 'com.fasterxml.jackson.core:jackson-databind:2.6.4'
     compile 'org.apache.httpcomponents:httpclient:4.5.1'
     // needed to provide validaton for a property of type amazon Region
-    compile 'com.amazonaws:aws-java-sdk:1.10.44'
+    compile 'com.amazonaws:aws-java-sdk:1.10.45'
 
     testCompile 'org.codehaus.groovy:groovy-all:2.4.5'
     testCompile 'org.hamcrest:hamcrest-core:1.3'

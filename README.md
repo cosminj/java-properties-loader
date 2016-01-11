@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/cosminj/java-properties-loader.svg?branch=master)](https://travis-ci.org/cosminj/java-properties-loader)
+[![Coverage Status](https://coveralls.io/repos/cosminj/java-properties-loader/badge.svg?branch=master&service=github)](https://coveralls.io/github/cosminj/java-properties-loader?branch=master)
 [![Dependency Status](https://www.versioneye.com/user/projects/568e323e9c1b9802c5000000/badge.svg?style=flat)](https://www.versioneye.com/user/projects/568e323e9c1b9802c5000000)
 
 # java-properties-loader
@@ -7,7 +8,7 @@ A pure java framework for loading up dozens of properties from the classpath, Sy
 ## Technical Characteristics
 
 - Initialization supports loading and combining properties from multiple URIs
-- To add a new known property to the system, simply edit 
+- To add a new known property to the system, simply edit
 
 ```java
 public enum ReferenceProperty {
